@@ -13,16 +13,7 @@ async function aliveCommand(sock, chatId, message) {
                        `Type *.menu* for full command list`;
 
         await sock.sendMessage(chatId, {
-            text: message1,
-            contextInfo: {
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: 'Infinite Bot',
-                    serverMessageId: -1
-                }
-            }
+            text: message1
         }, { quoted: message });
     } catch (error) {
         console.error('Error in alive command:', error);

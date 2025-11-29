@@ -147,20 +147,9 @@ const soraCommand = require('./commands/sora');
 global.packname = settings.packname;
 global.author = settings.author;
 global.channelLink = "https://whatsapp.com/channel/0029Va90zAnIHphOuO8Msp3A";
-global.ytch = "Mr Unique Hacker";
+global.ytch = "Infinite Bot Hacker";
 
-// Add this near the top of main.js with other global configurations
-const channelInfo = {
-    contextInfo: {
-        forwardingScore: 1,
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363161513685998@newsletter',
-            newsletterName: 'Infinite Bot',
-            serverMessageId: -1
-        }
-    }
-};
+// channelInfo is now imported from lib/messageConfig.js
 
 async function handleMessages(sock, messageUpdate, printLog) {
     try {

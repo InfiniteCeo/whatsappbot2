@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 const BASE = 'https://shizoapi.onrender.com/api/pies';
-const VALID_COUNTRIES = ['china', 'indonesia', 'japan', 'korea', 'hijab'];
+const VALID_COUNTRIES = ['china', 'indonesia', 'japan', 'kenya', 'hijab'];
 
 async function fetchPiesImageBuffer(country) {
 	const url = `${BASE}/${country}?apikey=shizo`;

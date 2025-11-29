@@ -7,7 +7,7 @@ async function helpCommand(sock, chatId, message) {
 ╔═══════════════════╗
    *🤖 ${settings.botName || 'KnightBot-MD'}*  
    Version: *${settings.version || '3.0.0'}*
-   by ${settings.botOwner || 'Mr Unique Hacker'}
+   by ${settings.botOwner || 'Infinite Bot Hacker'}
    YT : ${global.ytch}
 ╚═══════════════════╝
 
@@ -232,30 +232,12 @@ Join our channel for updates:`;
             
             await sock.sendMessage(chatId, {
                 image: imageBuffer,
-                caption: helpMessage,
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'Infinite Bot',
-                        serverMessageId: -1
-                    }
-                }
+                caption: helpMessage
             },{ quoted: message });
         } else {
             console.error('Bot image not found at:', imagePath);
             await sock.sendMessage(chatId, { 
-                text: helpMessage,
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'Infinite Bot by Mr Unique Hacker',
-                        serverMessageId: -1
-                    } 
-                }
+                text: helpMessage
             });
         }
     } catch (error) {
